@@ -1,28 +1,40 @@
 {
-  "name": "node-todo-api",
+  "name": "todo-api",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "test": "export NODE_ENV=test || \"SET NODE_ENV=test\" && mocha server/**/*.test.js",
+    "test": "export NODE_ENV=test || SET NODE_ENV=test && mocha server/**/*.test.js",
     "test-watch": "nodemon --exec 'npm test'"
   },
   "engines": {
-    "node": "11.7.0"
+    "node": "6.2.2"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0",
-    "lodash": "^4.17.11",
-    "mongodb": "^2.2.36",
-    "mongoose": "^4.13.18"
+    "body-parser": "^1.18.3",
+    "crypto-js": "^3.1.9-1",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.15.0",
+    "mongodb": "^2.2.5",
+    "mongoose": "^4.5.9",
+    "validator": "^5.7.0"
   },
   "devDependencies": {
     "expect": "^1.20.2",
-    "mocha": "^3.5.3",
+    "mocha": "^5.2.0",
     "nodemon": "^1.10.2",
-    "supertest": "^2.0.0"
-  }
+    "supertest": "^3.4.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abillas/node-todo-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abillas/node-todo-api/issues"
+  },
+  "homepage": "https://github.com/abillas/node-todo-api#readme",
+  "description": ""
 }
