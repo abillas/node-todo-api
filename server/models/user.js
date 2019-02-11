@@ -61,9 +61,7 @@ UserSchema.methods.removeToken = function(token) {
 
   return user.update({
     $pull: {
-      tokens: {
-        token: { token }
-      }
+      tokens: { token }
     }
   });
 };
@@ -92,7 +90,8 @@ UserSchema.statics.findByCredentials = function(email, password) {
     if (!user) {
       return Promise.reject();
     }
-    return new Promise(resolve, reject => {
+
+    return new Promise((resolve, reject) => {
       bcrypt.compare(password, user.password, (err, res) => {
         if (res) {
           resolve(user);
